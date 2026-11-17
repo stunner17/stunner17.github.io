@@ -1,0 +1,168 @@
+---
+layout: default
+---
+{%- assign a = site.author -%}
+<nav class="nav nav-on-{{ site.hero_theme | default: 'dark' }}" id="nav" aria-label="Sections">
+  <div class="wrap nav-inner">
+    <a class="nav-name" href="#top">{{ a.name }}</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#news">News</a>
+      <a href="#publications">Publications</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero hero-{{ site.hero_theme | default: 'dark' }} hero-{{ site.hero_layout | default: 'full' }}" data-style="{{ site.hero_style | default: 'glow' }}" id="top">
+  <canvas class="hero-canvas" aria-hidden="true"></canvas>
+  <div class="hero-shade" aria-hidden="true"></div>
+  <div class="wrap hero-content">
+    <p class="eyebrow">{{ a.role }} · {{ a.affiliation }}</p>
+    <h1>{{ a.name }}</h1>
+    <p class="tagline">Machine learning for <span class="hl-cyan">spatial proteomics</span> and <span class="hl-magenta">computational pathology</span>, from single cells to tissue.</p>
+    <div class="hero-links">
+      <a class="btn btn-primary" href="mailto:{{ a.email }}">Email me</a>
+      {%- if a.cv %}<a class="btn" href="{{ a.cv | relative_url }}">CV</a>{% endif %}
+      {%- for l in site.links %}<a class="btn" href="{{ l.url }}" rel="me">{{ l.label }}</a>{% endfor %}
+    </div>
+  </div>
+  <a class="scroll-cue" href="#about" aria-label="Scroll to content"><span></span></a>
+</header>
+
+<main>
+  <section id="about" class="section">
+    <div class="wrap">
+      <p class="label reveal">About</p>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            I am a PhD student in Biomedical Engineering at Stony Brook University,
+            advised by Dr. Jun Wang in the Multiplex Biotechnology Laboratory. I develop machine
+            learning methods for highly multiplexed single-cell spatial proteomics generated with
+            Multiplex In Situ Tagging (MIST), with the goal of finding disease-associated biomarkers
+            and cell phenotypes, and predicting them directly from routine histopathology.
+          </p>
+          <p>
+            Before Stony Brook, I completed an M.S. in Biological Engineering at the University of
+            Nebraska–Lincoln with Dr. Hyun-Seob Song, where I built models that couple genomics,
+            thermodynamics, and multi-species kinetics to study subsurface microbial communities.
+            My undergraduate work used deep CNNs and transfer learning for medical image
+            classification. I also build tools for LLM agents, including MCP servers.
+          </p>
+        </div>
+        <aside class="facts reveal" aria-label="At a glance">
+          {%- if a.photo %}
+          <img class="photo" src="{{ a.photo | relative_url }}" alt="Photo of {{ a.name }}" width="240" height="240">
+          {%- endif %}
+          <dl>
+            <div><dt>Lab</dt><dd>Multiplex Biotechnology Laboratory</dd></div>
+            <div><dt>Advisor</dt><dd>Dr. Jun Wang</dd></div>
+            <div><dt>Department</dt><dd>Biomedical Engineering, Stony Brook University</dd></div>
+            <div><dt>Teaching</dt><dd>BME 313 Bioinstrumentation, Fall 2026</dd></div>
+          </dl>
+        </aside>
+      </div>
+      <p class="interests reveal"><span>Research interests</span>{{ site.data.interests | join: " · " }}</p>
+    </div>
+  </section>
+
+  {%- assign news = site.data.news -%}
+  {%- if news.size > 0 %}
+  <section id="news" class="section section-alt">
+    <div class="wrap">
+      <p class="label reveal">News</p>
+      <ol class="news">
+        {%- for n in news %}
+        <li class="reveal{% if forloop.index > site.news_limit %} is-older{% endif %}">
+          <span class="news-date">{{ n.date }}</span>
+          <span class="news-text">{{ n.text | markdownify | remove: '<p>' | remove: '</p>' | strip }}</span>
+        </li>
+        {%- endfor %}
+      </ol>
+      {%- if news.size > site.news_limit %}
+      <button class="more" type="button" aria-expanded="false">Show older news</button>
+      {%- endif %}
+    </div>
+  </section>
+  {%- endif %}
+
+  <section id="publications" class="section">
+    <div class="wrap">
+      <p class="label reveal">Publications</p>
+      {%- assign me = a.citation_name | prepend: "<strong>" | append: "</strong>" -%}
+      {%- assign groups = "manuscript:Manuscripts in preparation|preprint:Preprints|proceedings:Conference proceedings|thesis:Thesis|poster:Posters and presentations" | split: "|" -%}
+      {%- for g in groups %}
+        {%- assign key = g | split: ":" | first -%}
+        {%- assign label = g | split: ":" | last -%}
+        {%- assign pubs = site.data.publications | where: "type", key -%}
+        {%- if pubs.size > 0 %}
+      <h3 class="pub-group reveal">{{ label }}</h3>
+      <ol class="pubs">
+        {%- for p in pubs %}
+        <li class="pub reveal">
+          <span class="pub-year">{{ p.year }}</span>
+          <div class="pub-body">
+            <span class="pub-title">{{ p.title }}</span>
+            <span class="pub-authors">{{ p.authors | replace: a.citation_name, me }}</span>
+            <span class="pub-venue"><em>{{ p.venue }}</em></span>
+            {%- if p.links %}
+            <span class="pub-links">{% for l in p.links %}<a href="{{ l[1] }}">{{ l[0] }}</a>{% endfor %}</span>
+            {%- endif %}
+          </div>
+        </li>
+        {%- endfor %}
+      </ol>
+        {%- endif %}
+      {%- endfor %}
+    </div>
+  </section>
+
+  <section id="projects" class="section section-alt">
+    <div class="wrap">
+      <p class="label reveal">Projects</p>
+      <div class="projects">
+        {%- for p in site.data.projects %}
+        <article class="project reveal" style="--i: {{ forloop.index0 | modulo: 2 }}">
+          <div class="project-head">
+            <h3>{{ p.title }}</h3>
+            <span class="project-date">{{ p.date }}</span>
+          </div>
+          <p>{{ p.summary | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+          <div class="project-foot">
+            <div class="tags">{% for t in p.tags %}<span class="tag">{{ t }}</span>{% endfor %}</div>
+            {%- if p.links.code %}<a class="project-link" href="{{ p.links.code }}">Code ↗</a>{% endif %}
+          </div>
+        </article>
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="section">
+    <div class="wrap">
+      <p class="label reveal">Research experience</p>
+      {% include entries.html items=site.data.cv.research %}
+
+      <div class="cv-grid">
+        <div>
+          <p class="label reveal">Teaching</p>
+          {% include entries.html items=site.data.cv.teaching %}
+        </div>
+        <div>
+          <p class="label reveal">Education</p>
+          {% include entries.html items=site.data.cv.education %}
+        </div>
+        <div>
+          <p class="label reveal">Awards</p>
+          {% include entries.html items=site.data.cv.awards %}
+        </div>
+        <div>
+          <p class="label reveal">Service</p>
+          {% include entries.html items=site.data.cv.service %}
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

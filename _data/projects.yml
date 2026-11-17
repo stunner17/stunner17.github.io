@@ -1,0 +1,94 @@
+# Newest first. `summary` accepts Markdown.
+- title: aHandForMyAunt, a hands-free robot arm
+  date: Nov 2026
+  summary: >-
+    A team-built assistive robot arm for people with limited use of their arms
+    and hands. Face tracking (eyes, nose, and mouth) steers an OpenMANIPULATOR-X
+    on a Jetson Orin, with voice control and object finding through Amazon Nova.
+    Every motion is checked against reach and safety limits, and fetching a named
+    object asks the user to confirm first. Honorable mention, Best Practical AI
+    Innovation, HackPrinceton Fall 2026.
+  tags: [robotics, computer vision, LLM agents]
+  links:
+    code: https://github.com/stunner17/hack_princeton
+
+- title: Contrast vs averaging GNNs for spatial proteomics
+  date: Nov 2026
+  summary: >-
+    Tests whether graph neural networks that keep cell-to-cell differences
+    predict breast cancer survival from imaging mass cytometry better than
+    averaging GNNs (METABRIC, 689 patients, 1.1M cells). All 20 GNNs beat
+    chance (C-index 0.60–0.65), but none beat the same model without graph
+    edges in 54 pre-specified tests, and clinical variables alone did best.
+    Includes a fused Triton kernel for the contrast operator that is 8–59×
+    faster than PyTorch Geometric on Blackwell and H200 GPUs.
+  tags: [graph neural networks, survival analysis, GPU kernels]
+  links:
+    code: https://github.com/stunner17/contrast-gnn-spatial-proteomics
+
+- title: Virtual immunofluorescence in kidney
+  date: Oct 2026
+  summary: >-
+    Tests whether GigaTIME virtual multiplex immunofluorescence and the
+    Prov-GigaPath foundation model carry over from lung cancer to lupus nephritis
+    kidney biopsies, with MIST spatial proteomics (21 proteins) as ground truth.
+    Prov-GigaPath features beat GigaTIME's own virtual channels (median Spearman
+    0.23 vs 0.13 on PAS). GigaTIME's virtual CD4, CD8, and CD20 collapse onto one
+    interstitium-vs-tubule axis (r = 0.82 vs 0.10 for measured proteins).
+  tags: [computational pathology, foundation models, spatial proteomics]
+  links:
+    code: https://github.com/stunner17/gigatime-kidney-benchmark
+
+- title: Therapist-guided family therapy app
+  date: Oct 2026
+  summary: >-
+    Built with Dr. Chethan Sarabu (Cornell Tech, Stanford Medicine) and team at
+    the Claude Community Build Day for Mental Health in New York, held with
+    ElevenLabs ahead of World Mental Health Day. Focused on adverse childhood
+    experiences: an AI agent supports a teen and their parents between therapy
+    sessions, every message is consent-gated, and safety concerns go straight to
+    the clinician.
+  tags: [mental health, LLM agents, clinical safety]
+
+- title: Nuclear segmentation benchmark
+  date: Oct 2026
+  summary: >-
+    Compares StarDist, Cellpose-SAM, Cellpose 3, and Mesmer against 7,764
+    expert-annotated nuclei across 79 fluorescence images, with bootstrap
+    confidence intervals. The two Cellpose models are statistically tied at
+    F1 ≈ 0.92; StarDist closes most of its gap after rescaling and runs about
+    100× faster on CPU.
+  tags: [computer vision, microscopy, benchmarking]
+  links:
+    code: https://github.com/stunner17/segmentation-benchmark
+
+- title: Research paper "For You" feed
+  date: Sep 2026
+  summary: >-
+    An agent-driven daily feed of newly published peer-reviewed articles with
+    short email summaries. Likes drive recommendations of similar work, and any
+    research interest can be entered as free text. Built at Claude Build Night,
+    Mineola, NY.
+  tags: [LLM agents, recommendation]
+
+- title: grant-mcp
+  date: Apr 2026
+  summary: >-
+    A Model Context Protocol server that lets AI agents search and analyze
+    federal research funding in plain English. Wraps NIH RePORTER, NSF Awards,
+    Grants.gov, and USASpending.gov (DOE, USDA, NASA, DARPA) behind tools for
+    grant search, PI and institution lookup, open opportunities, and funding
+    trends. Deployed as a hosted service.
+  tags: [MCP, Python, APIs]
+  links:
+    code: https://github.com/stunner17/grant-mcp
+
+- title: Medical image classification with transfer learning
+  date: Mar 2026
+  summary: >-
+    A modular notebook for transfer learning on brain tumor, lung cancer, and
+    skin cancer images with VGG16/19, ResNet50, MobileNetV2, and U-Net,
+    including Grad-CAM explanations and automated model comparison.
+  tags: [deep learning, TensorFlow]
+  links:
+    code: https://github.com/stunner17/medical-image-classification-cnn

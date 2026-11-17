@@ -1,0 +1,50 @@
+# Newest first; the top `news_limit` items (see _config.yml) show by default.
+# `text` accepts Markdown links: [label](https://...).
+- date: Nov 2026
+  text: >-
+    Our team won an honorable mention in the **Best Practical AI Innovation** category
+    at HackPrinceton Fall 2026 for [aHandForMyAunt](https://github.com/stunner17/hack_princeton),
+    a hands-free robot arm controlled by face tracking and voice.
+
+- date: Nov 2026
+  text: >-
+    Released a [benchmark of contrast vs averaging GNNs](https://github.com/stunner17/contrast-gnn-spatial-proteomics)
+    for breast cancer survival prediction from spatial proteomics, with a fused Triton GPU kernel.
+
+- date: Oct 2026
+  text: >-
+    Released a [benchmark of GigaTIME and Prov-GigaPath](https://github.com/stunner17/gigatime-kidney-benchmark)
+    against MIST spatial proteomics in lupus nephritis kidney biopsies.
+
+- date: Oct 2026
+  text: >-
+    At the Claude Community Build Day for Mental Health in New York, with ElevenLabs,
+    our team built a therapist-guided family therapy app for adverse childhood experiences.
+
+- date: Sep 2026
+  text: >-
+    Built a research-paper "For You" feed at Claude Build Night in Mineola, NY.
+
+- date: Aug 2026
+  text: >-
+    Started my PhD in Biomedical Engineering at Stony Brook University, joining
+    the Multiplex Biotechnology Laboratory with Dr. Jun Wang.
+
+- date: Jul 2026
+  text: >-
+    New preprint on bioRxiv benchmarking splice-disruption predictors on MFASS.
+    [[doi]](https://doi.org/10.64898/2026.07.21.739871)
+
+- date: Jun 2026
+  text: >-
+    Completed my M.S. in Biological Engineering at the University of Nebraska–Lincoln.
+    [[thesis]](https://digitalcommons.unl.edu/biosysengdiss/175/)
+
+- date: Apr 2026
+  text: >-
+    Released [grant-mcp](https://github.com/stunner17/grant-mcp), an MCP server
+    that lets AI agents query federal research-funding data.
+
+- date: "2025"
+  text: >-
+    Received the Community Builder Award from Biological Systems Engineering, University of Nebraska–Lincoln.

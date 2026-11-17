@@ -1,0 +1,51 @@
+# Site settings. Content lives in _data/*.yml; see README.md.
+
+title: Jackfin KC
+description: >-
+  PhD student in Biomedical Engineering at Stony Brook University working on
+  machine learning for spatial proteomics and computational pathology.
+url: https://stunner17.github.io
+baseurl: ""
+lang: en
+
+author:
+  name: Jackfin KC
+  # How your name appears in author lists; it is bolded automatically.
+  citation_name: J. KC
+  role: PhD Student, Biomedical Engineering
+  affiliation: Stony Brook University
+  affiliation_url: https://www.stonybrook.edu/commcms/bme/
+  email: jackfin.kc@stonybrook.edu
+  # Optional: put a square photo at assets/img/profile.jpg and uncomment.
+  # photo: /assets/img/profile.jpg
+  # Optional: put a CV at assets/cv.pdf and uncomment.
+  # cv: /assets/cv.pdf
+
+links:
+  - label: GitHub
+    url: https://github.com/stunner17
+  - label: LinkedIn
+    url: https://www.linkedin.com/in/jackfin-kc-660a8315a/
+  - label: ResearchGate
+    url: https://www.researchgate.net/profile/Jackfin-Kc
+
+# Front-page banner: light | dark (dark is always used when the visitor's OS is in dark mode).
+hero_theme: light
+hero_style: crisp    # glow | crisp | segmentation
+hero_layout: full    # full | panel
+
+# Number of news items shown before the "show all" toggle.
+news_limit: 5
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+markdown: kramdown
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .bundle

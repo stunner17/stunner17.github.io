@@ -1,0 +1,74 @@
+# Each section renders as a dated list. `details` items accept Markdown.
+# Wrap any value containing ": " in quotes, e.g. note: "Advisor: Dr. Jun Wang".
+
+research:
+  - title: Graduate Research Assistant
+    org: Multiplex Biotechnology Laboratory, Stony Brook University
+    note: "Advisor: Dr. Jun Wang"
+    date: Aug 2026 – present
+    details:
+      - Machine learning for highly multiplexed single-cell proteomic data from Multiplex In Situ Tagging (MIST).
+      - Deep learning models that predict protein biomarkers from histopathology images.
+      - Statistical and deep models to identify disease-associated biomarkers and cell phenotypes in spatial proteomic profiles.
+
+  - title: Graduate Research Assistant
+    org: Biological Systems Engineering, University of Nebraska–Lincoln
+    note: "Advisor: Dr. Hyun-Seob Song"
+    date: Aug 2024 – Jun 2026
+    details:
+      - Models of microbial communities interacting with abiotic environments, integrating genomics, thermodynamics, and multi-species kinetics.
+      - "Metagenome and MAG analysis: assembly, functional annotation, phylogenetics, and database mining."
+      - An Android app for interactive Lotka–Volterra simulation of microbial interactions.
+
+  - title: Undergraduate Researcher
+    org: Purbanchal University
+    note: "Supervisor: Asst. Prof. Kamal KC"
+    date: B.S.
+    details:
+      - Transfer-learning CNN for brain tumor classification, reaching 96.5% validation accuracy versus a prior 84.2%.
+
+teaching:
+  - title: "Teaching Assistant, BME 313: Bioinstrumentation"
+    org: Stony Brook University
+    note: "Instructor: Dr. Wei Lin"
+    date: Fall 2026
+
+  - title: "Teaching Assistant, AGST 492: Agentic AI for Workflow Automation"
+    org: University of Nebraska–Lincoln
+    note: "Instructor: Dr. Santosh Pitla"
+    date: Spring 2026
+    details:
+      - Wrote a course handbook on AI tools, their applications, and responsible use.
+
+education:
+  - title: Ph.D., Biomedical Engineering
+    org: Stony Brook University
+    date: 2026 – present
+
+  - title: M.S., Biological Engineering
+    org: University of Nebraska–Lincoln
+    note: "Thesis: [Thermodynamic Modeling of pH Impacts on Subsurface Microbial Consortia](https://digitalcommons.unl.edu/biosysengdiss/175/)"
+    date: 2024 – 2026
+
+  - title: B.S., Biomedical Engineering
+    org: College of Biomedical Engineering and Applied Sciences, Purbanchal University
+    date: 2017 – 2022
+
+awards:
+  - title: Honorable Mention, Best Practical AI Innovation
+    org: HackPrinceton Fall 2026, Princeton University
+    date: "2026"
+  - title: Community Builder Award
+    org: Biological Systems Engineering, University of Nebraska–Lincoln
+    date: "2025"
+  - title: Graduate Research Assistantship (fully funded)
+    org: Biological Systems Engineering, University of Nebraska–Lincoln
+    date: 2024 – 2026
+  - title: Full-ride undergraduate scholarship
+    org: Purbanchal University, Nepal
+    date: 2017 – 2022
+
+service:
+  - title: Editor, Graduate Arts and Sciences Magazine
+    org: Stony Brook University
+    date: 2026 – present

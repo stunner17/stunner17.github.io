@@ -1,0 +1,67 @@
+# Grouped by `type`, newest first within each group.
+# type: manuscript | preprint | proceedings | thesis | poster
+# links: any of pdf, doi, code, poster, slides, url
+
+- type: manuscript
+  title: >-
+    Spatial Proteomics and Graph Neural Networks to Predict Proteinuria Response
+    in Lupus Nephritis
+  authors: J. KC, A. Meah, S. Mallipattu, J. Wang
+  venue: Manuscript in preparation
+  year: 2026
+
+- type: preprint
+  title: >-
+    A Reproducible MFASS Benchmark of Splice-Disruption Predictors Reveals a
+    Shared Exon-Interior Blind Spot
+  authors: B. F. Znabu, Z. Atif, P. Devkota, R. H. Alemu, J. KC
+  venue: bioRxiv
+  year: 2026
+  links:
+    doi: https://doi.org/10.64898/2026.07.21.739871
+
+- type: proceedings
+  title: >-
+    Deep Convolutional Neural Network and Transfer Learning to Classify
+    Cataract Based on Fundus Images
+  authors: J. KC, K. Devkota, K. KC, A. Acharya, S. Shrestha
+  venue: 10th International Conference on Advanced Engineering and ICT-Convergence (ICAEIC), Bangkok
+  year: 2023
+  links:
+    paper: https://www.researchgate.net/publication/373358777_Deep_Convolutional_Neural_Network_and_Transfer_Learning_to_Classify_Cataract_Based_on_Fundus_Images
+
+- type: thesis
+  title: Thermodynamic Modeling of pH Impacts on Subsurface Microbial Consortia
+  authors: J. KC
+  venue: M.S. Thesis, University of Nebraska–Lincoln
+  year: 2026
+  links:
+    url: https://digitalcommons.unl.edu/biosysengdiss/175/
+
+- type: poster
+  title: Modeling pH Stabilization by Mineral Dissolutions in Subsurface Microbial Consortia
+  authors: J. KC, S. Kharel, K. Weber, H.-S. Song
+  venue: Missouri Valley Branch ASM Regional Conference, Lincoln, NE
+  year: 2026
+
+- type: poster
+  title: >-
+    Integrating Genomics and Thermodynamics to Model H₂-Mediated Microbial
+    Interactions in Deep Subsurface
+  authors: S. Kharel, J. KC, N. Fiore, K. Weber, S. Mayumi, H.-S. Song
+  venue: 4th Annual UNL Microbiology Research Symposium, Lincoln, NE
+  year: 2025
+
+- type: poster
+  title: >-
+    Integrating Genomics and Thermodynamics to Explore the Subsurface Microbial
+    Impacts on Hydrogen Dynamics
+  authors: S. Kharel, J. KC, N. Fiore, K. Weber, S. Mayumi, H.-S. Song
+  venue: UNL Research Days, Lincoln, NE
+  year: 2025
+
+- type: poster
+  title: Deep Convolutional Neural Networks for Brain Tumor Classification
+  authors: J. KC, K. Kunwar, M. Pokhrel, A. Acharya
+  venue: 5th ICEHTMC Congress, Global Clinical Engineering Alliance
+  year: 2023

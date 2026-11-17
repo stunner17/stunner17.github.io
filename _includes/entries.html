@@ -1,0 +1,20 @@
+{%- comment -%} Renders a dated timeline. Usage: include entries.html items=site.data.cv.research {%- endcomment -%}
+<ol class="timeline">
+  {%- for e in include.items %}
+  <li class="tl-item reveal">
+    <div class="tl-date">{{ e.date }}</div>
+    <div class="tl-body">
+      <div class="tl-title">{{ e.title }}</div>
+      {%- if e.org %}<div class="tl-org">{{ e.org }}</div>{% endif %}
+      {%- if e.note %}<div class="tl-note">{{ e.note | markdownify | remove: '<p>' | remove: '</p>' | strip }}</div>{% endif %}
+      {%- if e.details %}
+      <ul class="tl-details">
+        {%- for d in e.details %}
+        <li>{{ d | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
+        {%- endfor %}
+      </ul>
+      {%- endif %}
+    </div>
+  </li>
+  {%- endfor %}
+</ol>
