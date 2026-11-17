@@ -35,6 +35,10 @@
     Prov-GigaPath features beat GigaTIME's own virtual channels (median Spearman
     0.23 vs 0.13 on PAS). GigaTIME's virtual CD4, CD8, and CD20 collapse onto one
     interstitium-vs-tubule axis (r = 0.82 vs 0.10 for measured proteins).
+    **Update (Nov 2026):** Training on cell-level MIST labels raised
+    PAS-to-protein Spearman from 0.27 to 0.36 with H-optimus-0. Our
+    kidney-specific encoder matches it (0.359 vs 0.357). Preliminary; code
+    coming with the preprint.
   tags: [computational pathology, foundation models, spatial proteomics]
   links:
     code: https://github.com/stunner17/gigatime-kidney-benchmark
