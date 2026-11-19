@@ -2,6 +2,11 @@
 # `text` accepts Markdown links: [label](https://...).
 - date: Nov 2026
   text: >-
+    Released a [measurement-ceiling analysis](https://github.com/stunner17/single-cell-perturbation-ceiling)
+    of single-cell perturbation benchmarks on Sci-Plex 3: a perfect predictor would score only R² = 0.216.
+
+- date: Nov 2026
+  text: >-
     Our team won an honorable mention in the **Best Practical AI Innovation** category
     at HackPrinceton Fall 2026 for [aHandForMyAunt](https://github.com/stunner17/hack_princeton),
     a hands-free robot arm controlled by face tracking and voice.

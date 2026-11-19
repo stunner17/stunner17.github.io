@@ -1,4 +1,18 @@
 # Newest first. `summary` accepts Markdown.
+- title: How much of a single-cell perturbation benchmark is signal?
+  date: Nov 2026
+  summary: >-
+    Measures how much of a dose-resolved single-cell perturbation target is real
+    signal, using Sci-Plex 3 (188 compounds, 4 doses, 3 cell lines, 680K cells).
+    A perfect, noiseless predictor would score only R² = 0.216, and reliability
+    rises with dose as sampling noise predicts. On frozen splits, the best
+    baselines reach 34% of that ceiling for unseen doses and 9.5% for unseen
+    compounds, and every model beats its permutation null even when it loses to
+    predicting no change.
+  tags: [single-cell transcriptomics, benchmarking, statistics]
+  links:
+    code: https://github.com/stunner17/single-cell-perturbation-ceiling
+
 - title: aHandForMyAunt, a hands-free robot arm
   date: Nov 2026
   summary: >-
